@@ -1,0 +1,23 @@
+<!--Random User Generator-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!--Link css style sheet-->
+    <title>Random User Generator</title>
+</head>
+<body>
+    <div id="app"> <!--This is Vue are where JS is outputted to. Can use any app data here-->
+        <!--Notation for accessing Vue data is {{}}-->  
+        <img v-bind:class="gender" v-bind:src="picture" v-bind:alt="`${firstName} ${lastName}`"> <!-- v-bind: directive required with vue instead of just src: or alt:. Can use :src = ... as a shorthand which means the same-->
+        <h1>{{firstName}} {{lastName}}</h1> 
+        <h3>Email: {{email}}</h3>
+        <button v-on:click ="getUser()" v-bind:class="gender">Get Random User</button> <!--v-on:event used here, which calls get_User method from vue-->
+    </div>
+    <!--Give JS access to the DOM:-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- Quick way of using Vue, using a CDN, rather than the CLI (Command line interface) installed through npm-->
+    <script src="app.js"></script>
+</body>
+</html>

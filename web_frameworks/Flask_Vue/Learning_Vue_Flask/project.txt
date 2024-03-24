@@ -1,0 +1,23 @@
+Useful notes for project:
+
+- Backend: Flask. Handles computation heavy code (on server, which tend to be faster computers), lay out routes and handle app's data and database (for each route and request)
+- Frontend: Vue. Handles UI and interacts with backend. Still need to lay out routes.
+- Using axios to connect frontend and backend
+- Set up Vue using Vue CLI in frontend folder, named proj frontend
+- Left .txt files throughout project to describe folder/file purpose
+
+Vue-Flask SPA Gneral Plan
+------------------
+1 Connect UI front-end app to Flask back-end server using axios
+2 Develop a RESTful API with Flask to conect to frontend
+3 Use Vue router to create routes. 
+4 Bootstrap for styling and for 2 modals. 
+
+Application tools:
+-----------------
+Vue v2.6.11
+Vue CLI v4.5.11
+Node v15.7.0
+npm v7.4.3
+Flask v1.1.2
+Python v3.9.

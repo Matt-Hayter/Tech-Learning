@@ -1,0 +1,108 @@
+<template>
+  <div class="line-chart">
+      <div class="chart-container" :class="stylingClass">
+        <canvas id="dynamic-line-chart"></canvas>
+      </div>
+  </div>
+</template>
+
+<script>
+import { Chart as ChartJS, LinearScale, LineController, PointElement, LineElement } from 'chart.js'
+ChartJS.register(LinearScale, LineController, PointElement, LineElement)
+
+export default {
+  props: {
+    lineChartConfig: Function,
+    stylingClass: String,
+  },
+  data() {
+    return {
+      lineChart: null,
+      configObject: null,
+      animation: null,
+      delayBetweenPoints: 10, //[ms] Delay between data points. Applies to both line and bar chart
+    }
+  },
+  methods: {
+    setUpChart(simData) {
+      //Assign all data to graph config
+      for(let i = 0; i < simData.length; i++) {
+        this.configObject.data.datasets[i].data = simData[i]
+        console.log(this.configObject.data.datasets[i].data)
+      }
+    },
+    setUpAnimation() {
+      //Find previous y point given current y point, for animation transition
+      const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) :
+        ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
+      const delayBetweenPoints = this.delayBetweenPoints
+      this.animation = { //For line graph animation
+        x: {
+          type: 'number',
+          easing: 'linear',
+          from: NaN, // the point is initially skipped
+          delay(ctx) {
+            if (ctx.type !== 'data' || ctx.xStarted) {
+              return 0;
+            }
+            ctx.xStarted = true;
+            return ctx.index * delayBetweenPoints;
+          }
+        },
+        y: {
+          type: 'number',
+          easing: 'linear',
+          from: previousY,
+          delay(ctx) {
+            if (ctx.type !== 'data' || ctx.yStarted) {
+              return 0;
+            }
+            ctx.yStarted = true;
+            return ctx.index * delayBetweenPoints;
+          }
+        },
+        onProgress: () => {
+          console.log("step")
+        }
+      }
+    },
+    startVisualisation() {
+      this.lineChart.reset()
+      this.configObject.options.animation = this.animation //Begin animaiton
+      this.lineChart.update()
+    },
+    endVisualisation() {
+      this.lineChart.stop()
+      this.$emit("endSim")
+    }
+  },
+  mounted() {
+    const ctx = document.getElementById("dynamic-line-chart").getContext("2d")
+    this.setUpAnimation(ctx)
+    this.configObject = this.lineChartConfig(ctx)
+    //Create chart.js bar plot, using inherited configuration
+    this.lineChart = new ChartJS(ctx, this.configObject);
+  }
+};
+</script>
+
+<style scoped>
+.chart-container {
+  padding: 20px;
+  background: white;
+  position: relative;
+  width: 95%;
+}
+.pred-prey {
+  min-height: 30vw;
+}
+.comp-spec {
+  min-height: 16vw;
+}
+.SIR {
+  min-height: 20vw;
+}
+.SEIDR {
+  min-height: 25vw;
+}
+</style>

@@ -1,0 +1,1 @@
+Folder where all static assests such as images are stored

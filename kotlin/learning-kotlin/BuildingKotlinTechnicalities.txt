@@ -1,0 +1,9 @@
+Building Kotlin program:
+
+- Targeting the JVM:
+  1. Kotlin file (.kt) + Kotlin compiler -> Java/Kotlin compatible bytecode (.class)
+  2. JVM/Kotlin compatible bytecode (.class) + Kotlin runtime (Kotlin standard class library) + JRE (Java libraries + JVM (interpreter, CLI uses command java ...)) -> run program
+
+
+- Targeting native:
+  1. Kotlin file (.kt) + Kotlin compiler -> platform specific code

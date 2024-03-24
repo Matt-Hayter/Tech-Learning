@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/Student/Documents/C++home/C++Code/MPhys/Learning_code_ws/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/project_1.dir/includes_CXX.rsp -g -o CMakeFiles\\project_1.dir\\main.cpp.obj -c C:\\Users\\Student\\Documents\\C++home\\C++Code\\MPhys\\Learning_code_ws\\main.cpp",
+  "file": "C:/Users/Student/Documents/C++home/C++Code/MPhys/Learning_code_ws/main.cpp"
+},
+{
+  "directory": "C:/Users/Student/Documents/C++home/C++Code/MPhys/Learning_code_ws/build/Adder_dir",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE   -g -o CMakeFiles\\Adder_dir.dir\\adder.cpp.obj -c C:\\Users\\Student\\Documents\\C++home\\C++Code\\MPhys\\Learning_code_ws\\Adder_dir\\adder.cpp",
+  "file": "C:/Users/Student/Documents/C++home/C++Code/MPhys/Learning_code_ws/Adder_dir/adder.cpp"
+}
+]

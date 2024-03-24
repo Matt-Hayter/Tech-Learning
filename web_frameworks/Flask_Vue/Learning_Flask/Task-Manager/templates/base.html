@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link stylesheet (this case in css, could be js) to html-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> <!--More Jinja syntax for string, after href = . Otherwise, would just use href= "css/main.css"-->
+    <!--Create a block within template, for all other pages which inherit this template-->
+    {% block head %}{% endblock %} <!--Jinja 2 syntax for if/else-like statements (used by Flask) as a template engine to allow writing code in a syntax similar to python-->
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>

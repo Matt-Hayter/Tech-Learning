@@ -1,0 +1,9 @@
+Steps for setting up backend environments:
+
+- Generate pipenv shell in terminal: pipenv shell
+- Create requirements.txt, with the requirements listed
+- Install requirements into virtual environment, with: pipenv install -r requirements.txt
+
+Notes on Backend:
+
+- Uses Flask with a Flask REST API to connect to frontend

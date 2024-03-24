@@ -1,0 +1,16 @@
+<!--For update page-->
+{% extends 'base.html' %}
+
+{% block head %} <!--For url title-->
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class ="content"> <!--Division/section in html document-->
+    <h1>Update Task</h1> <!--Header-->
+    <form class = "update" action="/update/{{task.id}}" method="POST"> <!--What page and what's being done at the page-->
+        <input type="text" name="content" id="content" value="{{task.content}}"> <!--a-->
+        <input type="submit" value="Update">
+    </form>
+</div>
+{% endblock %}

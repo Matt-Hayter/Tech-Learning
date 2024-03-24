@@ -1,0 +1,17 @@
+<!--html file for including modules-->
+<!--defer/async tags:-->
+<!--html files run from top to bottom, each time a JS script tag is encountered it downloads and then executes the JS-->
+<!--Async tag allows for asynchronous download of all src items, with the items are executed in an order of first ready to last-->
+<!--defer tag waits until html is completely parsed before executing the JS in order (not just by the first downloaded) -> useful-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Modules</title>
+    <!--Method for allowing custom modules to be included within src file-->
+    <script type = "module" defer src = "imports.js">
+    </script>
+</head>
+<body>
+</body>
+</html>

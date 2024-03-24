@@ -1,0 +1,11 @@
+Steps for setting up frontend:
+
+- .../ terminal: vue create frontend
+  This runs Vue CLI to create Vue project. Follow choices outlined in youtube vid.
+- Also need to install Bootstrap framework and Bootstrap-Vue in frontend/frontend: npm install bootstrap --save, npm install bootstrap-vue
+- Vue files are sturctured as: html -> JS -> CSS
+- src folder is the key folder for framework
+
+Extra notes:
+- Due to error from older version of node.js used in this project, required in frontend: export NODE_OPTIONS=--openssl-legacy-provider
+- need to navigate to /games in browser for useful app here

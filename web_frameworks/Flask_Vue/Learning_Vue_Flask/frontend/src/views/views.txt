@@ -1,0 +1,3 @@
+Seperate .vue file for each route (layed out in router folder)
+
+Left empty in this case

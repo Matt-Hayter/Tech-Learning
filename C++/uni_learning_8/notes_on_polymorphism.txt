@@ -1,0 +1,9 @@
+// An abstract class contains at least one pure virtual functon. Base classes should be abstract
+
+// Derived classes are abstract if they do not implement EACH pure virtual function.
+
+// Derived class must implement EACH pure virual function to be instantiated (abstract classes can't be instantiated)
+
+// -> Hence abstract classes cannot be instantiated
+
+// If a derived class has a constructor (can be instantiated) it can't have a pure virual function (as this makes it abstract)

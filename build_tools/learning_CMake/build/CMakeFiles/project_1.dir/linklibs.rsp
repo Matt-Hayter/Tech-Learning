@@ -1,0 +1,1 @@
+  -LC:/Users/Student/Documents/C++home/C++Code/MPhys/Learning_code_ws/Adder_dir  Adder_dir/libAdder_dir.a C:/Users/Student/Documents/C++home/C++External_directories/yaml-cpp/build/libyaml-cppd.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

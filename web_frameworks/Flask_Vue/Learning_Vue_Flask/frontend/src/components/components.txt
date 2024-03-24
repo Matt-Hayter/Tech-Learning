@@ -1,0 +1,18 @@
+Where UI components are stored
+
+- Vue components allow UI to be split into independent and reusable pieces
+- Components are reusable Vue instances with custom HTML elements. Components can be reused as many times as you want or used in another component, making it a child component. Data, computed, watch, and methods can be used in a Vue component.
+- For larger or reused components, consider splitting into parent an child components
+
+Vue directives notes:
+- directive:argument is a dynamic argument (can change value) that is passed to directive.
+- directive=".." is a string value (either method or data item) that is assigned to directive.
+- v-bind: = :, used to bind an element's attribute to a dynamic component variable (one-way bind)
+- v-model:, used to bind an element's input to a dynamic component variable (two-way bind)
+- v-on: = @, used to specify an event follows.
+- directive.modifier, gives a modification to the directive. These are directive-specific and can be used to mount component b to a by using a mount-type-specific directive in component a followed by the id of component b. 
+- Events have pre-defined modifiers called event modifiers. These are acces with v-on:event.modifier
+
+Bootstrap notes:
+- Used CSS framework bootstrap, which makes styling simple and means focus can be placed on logic
+- Also used Bootstrap-Vue, which is a component-based library based entirely on bootstrap CSS library -> Allows for CSS bootstrap to be used within Vue.js template
